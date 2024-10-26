@@ -1,0 +1,12 @@
+# k8s/cadvisor-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: cadvisor-service
+spec:
+  selector:
+    app: cadvisor
+  ports:
+    - port: 8080
+      targetPort: 8080
+  type: ClusterIP
